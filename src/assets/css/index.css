@@ -1,0 +1,56 @@
+/* FONTS */
+@font-face {
+  font-family: 'light';
+  src: url('src/assets/fonts/PPHatton-UltralightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'norm';
+  src: url('src/assets/fonts/Oxygen-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'strong';
+  src: url('src/assets/fonts/PPHatton-Medium.otf') format('opentype');
+}
+
+.light {
+  font-family: 'light' !important;
+  font-weight: lighter;
+}
+
+.strong {
+  font-family: 'strong' !important;
+}
+
+.norm {
+  font-family: 'norm' !important;
+}
+
+/* FONTS END */
+
+:root{
+  margin: 0;padding: 0;
+}
+
+.border{
+  border: 1px black solid;
+}
+
+.hero{
+  border-bottom: 1px black solid;
+}
+
+.background{
+  z-index: -1;
+}
+
+.nav{
+  z-index: 2;
+  backdrop-filter: blur(40px);
+}
+
+.circle1{
+  width: 100px; height: 100px;
+  background-color: red;
+  position: absolute;
+}
