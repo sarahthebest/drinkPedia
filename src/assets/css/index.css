@@ -14,11 +14,9 @@
 
 .light {
   font-family: 'light' !important;
-  font-weight: lighter;
 }
 .strong {
   font-family: 'strong' !important;
-  font-weight: lighter !important;
 }
 .norm {
   font-family: 'norm' !important;

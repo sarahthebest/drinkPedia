@@ -30,7 +30,7 @@ const SearchResults = () => {
     <>
       <Nav />
       <Hero />
-      <Box borderBottom="1px" padding="10">
+      <Box borderBottom="1px" paddingY="10" paddingLeft="6">
         <Heading size="lg" className="norm">
           {headingText}
         </Heading>

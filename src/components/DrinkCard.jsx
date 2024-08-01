@@ -1,10 +1,4 @@
-import {
-  CardBody,
-  Card,
-  CardHeader,
-  Heading,
-  Tag,
-} from "@chakra-ui/react";
+import { CardBody, Card, CardHeader, Heading, Tag } from "@chakra-ui/react";
 
 const DrinkCard = ({ drink }) => {
   return (
@@ -16,10 +10,10 @@ const DrinkCard = ({ drink }) => {
       justifyItems="justify-between"
       boxShadow="none"
       _hover={{
-        borderRadius:"20px",
-        bg:"white",
-        transitionDuration: '0.2s',
-        transitionTimingFunction: "ease-in-out"
+        borderRadius: "20px",
+        bg: "white",
+        transitionDuration: "0.2s",
+        transitionTimingFunction: "ease-in-out",
       }}
     >
       <CardHeader
@@ -28,15 +22,19 @@ const DrinkCard = ({ drink }) => {
         flexDirection="row"
         justifyContent="space-between"
       >
-        <Heading size='lg' className="norm">{drink.strDrink}</Heading>
+        <Heading size="lg" className="norm">
+          {drink.strDrink}
+        </Heading>
+        {drink.strCategory && (
         <Tag
           height="fit-content"
           padding="2"
           borderRadius="full"
           colorScheme="purple"
         >
-          {drink.strCategory}
+            {drink.strCategory}
         </Tag>
+          )}
       </CardHeader>
       <CardBody>
         <img src={drink.strDrinkThumb} alt={drink.strDrink} />
