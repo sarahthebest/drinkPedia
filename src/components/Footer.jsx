@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <Box w="full" h="40" display="flex" flexDirection="column">
+    <Box fontSize="1.1em" w="full" h="40" display="flex" flexDirection="column">
       <Heading padding="4" className="strong">
         DrinkPedia
       </Heading>
@@ -11,9 +11,9 @@ const Footer = () => {
         <Text>
           Welcome to DrinkPedia. Built with React + ChakraUI using:
         </Text>
-        <Link to="https://www.thecocktaildb.com/">TheCocktailDB</Link>
+        <Link className="linkDecoration" to="https://www.thecocktaildb.com/">TheCocktailDB</Link>
         <br/>
-        <Link to="https://github.com/sarahthebest/drinkPedia">GitHub</Link>
+        <Link className="linkDecoration" to="https://github.com/sarahthebest/drinkPedia">GitHub</Link>
       </Box>
     </Box>
   );
