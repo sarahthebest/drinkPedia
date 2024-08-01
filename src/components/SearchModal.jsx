@@ -11,11 +11,32 @@ import {
 } from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { useDisclosure } from "@chakra-ui/react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SearchModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [searchTerm, SetSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  function onSearch(searchString) {
+    fetch(
+      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + searchString
+    )
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("There was an error searching for the drink");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        navigate("/SearchResults", {
+          state: { searchTerm: searchString, searchResult: data.drinks },
+        });
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
+      });
+  }
 
   return (
     <>
@@ -36,7 +57,15 @@ const SearchModal = () => {
               <InputLeftAddon>
                 <Icon as={CiSearch} />
               </InputLeftAddon>
-              <Input type="text" placeholder="Search..." />
+              <Input
+                type="search"
+                placeholder="Search..."
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") {
+                    onSearch(e.target.value);
+                  }
+                }}
+              />
             </InputGroup>
           </ModalBody>
         </ModalContent>

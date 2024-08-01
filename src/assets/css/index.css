@@ -1,29 +1,30 @@
 /* FONTS */
 @font-face {
   font-family: 'light';
-  src: url('src/assets/fonts/PPHatton-UltralightItalic.otf') format('opentype');
+  src: url('../fonts/PPPlayground-Medium.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'norm';
-  src: url('src/assets/fonts/Oxygen-Regular.ttf') format('truetype');
+  src: url('src/assets/fonts/PPNeueMontreal-Book.otf') format('opentype');
 }
 @font-face {
   font-family: 'strong';
-  src: url('src/assets/fonts/PPHatton-Medium.otf') format('opentype');
+  src: url('../fonts/PPEditorialNew-Regular.otf') format('opentype');
 }
 
 .light {
   font-family: 'light' !important;
   font-weight: lighter;
 }
-
 .strong {
   font-family: 'strong' !important;
+  font-weight: lighter !important;
 }
-
 .norm {
   font-family: 'norm' !important;
+}
+.spaced{
+  letter-spacing: 20px;
 }
 
 /* FONTS END */
@@ -49,8 +50,31 @@
   backdrop-filter: blur(40px);
 }
 
-.circle1{
-  width: 100px; height: 100px;
-  background-color: red;
+.circle{
+  width: 1200px; height: 1200px;
+  background: rgb(255,64,64);
+  background: radial-gradient(circle, rgba(255,64,64,1) 0%, rgba(255,239,74,0) 100%); 
   position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+  border-radius: 100%;
+  top: 20px; left:0;
+  animation: grow 4s ease-in-out infinite;
+}
+
+@keyframes grow {
+  0% {
+    height: 1000px;width: 100%;
+  }
+  50% {
+    height: 600px; width: 100%;
+  }
+  100%{
+    height: 1000px;width: 100%;
+  }
+}
+
+a{
+  text-decoration:underline solid black 1px !important;
+  margin-left:2px;
 }

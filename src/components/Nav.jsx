@@ -1,6 +1,7 @@
-import { Box, Button, HStack, Icon, Image, Link } from "@chakra-ui/react";
-import {  CiFilter  } from "react-icons/ci";
+import { Box, HStack, Image } from "@chakra-ui/react";
 import SearchModal from "./SearchModal";
+import { Link } from "react-router-dom";
+import FilterModal from "./FilterModal";
 
 const Nav = () => {
   return (
@@ -14,13 +15,11 @@ const Nav = () => {
         left='4'
       >
         <HStack spacing='2'>
-          <Link>
+          <Link to="/">
             <Image src="src/assets/img/logo.png" boxSize="50px" />
           </Link>
           <SearchModal />
-          <Button borderRadius='full' w="40px" h="40px" bg='lightgrey'>
-            <Icon as={CiFilter} />
-          </Button>
+          <FilterModal />
         </HStack>
       </Box>
   );
