@@ -7,7 +7,6 @@ DrinkPedia is a React application built with Chakra UI that allows users to sear
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 
 ## Features
 
@@ -57,30 +56,4 @@ To get started with DrinkPedia, follow these steps:
 - Click on a cocktail card to navigate to the cocktail details page.
 - The details page shows the ingredients, measurements, and instructions for the selected cocktail.
 
-## Project Structure
-
-Here is an overview of the project's structure:
-
-DrinkPedia/
-├── public/
-│ ├── index.html
-│ └── ...
-├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── DrinkCard.jsx
-│ │ ├── DrinkPage.jsx
-│ │ ├── FilterModal.jsx
-│ │ ├── Footer.jsx
-│ │ ├── Hero.jsx
-│ │ ├── Nav.jsx
-│ │ └── SearchResults.jsx
-│ ├── App.js
-│ ├── index.js
-│ └── ...
-├── package.json
-├── README.md
-└── ...
-
-markdown
 
