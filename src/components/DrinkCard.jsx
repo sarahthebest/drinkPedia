@@ -12,8 +12,15 @@ const DrinkCard = ({ drink }) => {
       _hover={{
         borderRadius: "20px",
         bg: "white",
+        transition: "all",
         transitionDuration: "0.2s",
-        transitionTimingFunction: "ease-in-out",
+        transitionTimingFunction: "ease",
+        ".cardimg": {
+          borderRadius: "20px",
+          transition: "all",
+          transitionDuration: "0.2s",
+          transitionTimingFunction: "ease",
+        },
       }}
     >
       <CardHeader
@@ -26,18 +33,22 @@ const DrinkCard = ({ drink }) => {
           {drink.strDrink}
         </Heading>
         {drink.strCategory && (
-        <Tag
-          height="fit-content"
-          padding="2"
-          borderRadius="full"
-          colorScheme="purple"
-        >
+          <Tag
+            height="fit-content"
+            padding="2"
+            borderRadius="full"
+            colorScheme="purple"
+          >
             {drink.strCategory}
-        </Tag>
-          )}
+          </Tag>
+        )}
       </CardHeader>
       <CardBody>
-        <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+        <img
+          className="cardimg"
+          src={drink.strDrinkThumb}
+          alt={drink.strDrink}
+        />
       </CardBody>
     </Card>
   );
