@@ -67,17 +67,17 @@ const DrinkPage = () => {
     <Box
       h={["100%", "100%", "100vh"]}
       display="flex"
-      flexDirection={["column", "column", "row"]}
+      flexDirection={["column", "column", "column", "row"]}
     >
       <Container
-        maxWidth={["none", "none", "70%"]}
+        maxWidth={["none", "none", "none", "70%"]}
         width="100%"
         bg="red.50"
         gap="4"
         display="flex"
         alignItems="center"
         justifyContent="center"
-        flexDirection={["column", "column", "row"]}
+        flexDirection={["column", "column", "column", "row"]}
       >
         <button onClick={() => navigate(-1)}>
           <Icon
@@ -85,12 +85,16 @@ const DrinkPage = () => {
             display="flex"
             w="50px"
             h="50px"
+            marginTop={["20px", "20px", "20px", "0"]}
+            marginLeft={["0", "0", "0", "40px"]}
             as={IoIosArrowBack}
           />
         </button>
         <Image
-          padding="20px"
-          width={["80%", "70%", "30em"]}
+          padding={["10px", "20px", "40px"]}
+          borderRadius="15%"
+          width={["80%", "70%", "60%", "600px"]}
+          objectFit="contain"
           src={drink.strDrinkThumb}
           alt={drink.strDrink}
         />
