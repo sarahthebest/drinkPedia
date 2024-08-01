@@ -6,7 +6,7 @@ import Nav from "./Nav";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchResults from "./SearchResults";
 import DrinkPage from "./DrinkPage";
-import SearchModal from "./SearchModal"; // Import SearchModal
+import SearchModal from "./SearchModal"; 
 
 const routes = [
   {
