@@ -18,10 +18,10 @@ const SearchResults = () => {
   }
 
   const headingText = searchTerm
-    ? `Search Results for: ${searchTerm}`
-    : filterResult
-    ? `  ${location.state.category}`
-    : "Results";
+  ? `Search Results for: ${searchTerm}`
+  : filterResult
+  ? `Filtered by: ${location.state.category}` 
+  : 'Results';
     
   const handleDrinkClick = (drinkId) => {
     navigate(`/drink/${drinkId}`);
@@ -30,9 +30,9 @@ const SearchResults = () => {
     <>
       <Nav />
       <Hero />
-      <Box borderBottom="1px" paddingY="10" paddingLeft="6">
+      <Box flexWrap="wrap" display="flex" borderBottom="1px" paddingY="10" paddingLeft="6">
         <Heading size="lg" className="norm">
-          {headingText}
+        {headingText} , Number of results: {results.length}
         </Heading>
       </Box>
       <Grid

@@ -17,22 +17,22 @@ const Hero = () => {
           as="h1"
           marginTop={["20px"]}
           marginLeft="20px"
-          fontSize={["3em", "4em", "6em", "8em"]}
+          fontSize={["2em", "3em", "4em", "6em"]}
           className="strong spaced"
           fontStyle="italic"
         >
-          Cocktails
+          Classic Cocktails
         </Heading>
         <div className="circle"></div>
         <Heading
           marginLeft={["20px"]}
           as="h2"
-          size={["2xl", "2xl", "4xl"]}
+          fontSize={["4em", "6em", "4em"]}
           marginTop={["20px", "20px", "170px","170px"]}
         >
-          <Text className="strong">Strong</Text>
+          <Text className="strong">Bold</Text>
           <Text marginLeft="10" className="light spaced">
-            & Light
+            & Refreshing
           </Text>
         </Heading>
         <div className="circle2"></div>
