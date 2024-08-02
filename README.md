@@ -2,6 +2,8 @@
 
 DrinkPedia is a React application built with Chakra UI that allows users to search and explore a variety of cocktails. The app fetches data from [TheCocktailDB](https://www.thecocktaildb.com/) API and presents it in a user-friendly interface.
 
+![Quick preview of the features.](src/assets/img/drinkPediaPreview.gif)
+
 ## Table of Contents
 
 - [Features](#features)
